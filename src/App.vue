@@ -27,7 +27,7 @@ export default {
           'description': 'Minecraft is a game about placing blocks and adventures.',
           'state': 'active',
           'url': 'https://github.com/Josantonius/vue-module-manager',
-          'image': '/static/minecraft.jpg'
+          'image': 'static/minecraft.jpg'
         },
         {
           'name': 'Crash Bandicoot',
@@ -35,7 +35,7 @@ export default {
           'description': 'Crash Bandicoot is a franchise of platform video games.',
           'state': 'outdated',
           'url': 'https://github.com/Josantonius/vue-module-manager',
-          'image': '/static/crash-bandicoot.jpg'
+          'image': 'static/crash-bandicoot.jpg'
         },
         {
           'name': 'Super Mario Bros',
@@ -43,7 +43,7 @@ export default {
           'description': 'Super Mario Bros is a video game developed by Nintendo.',
           'state': 'inactive',
           'url': 'https://github.com/Josantonius/vue-module-manager',
-          'image': '/static/super-mario-bros.jpg'
+          'image': 'static/super-mario-bros.jpg'
         }
       ],
       translations: {
