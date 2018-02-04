@@ -1,0 +1,26 @@
+os:
+  - linux
+
+sudo: false
+
+language: node_js
+
+node_js:
+  - "6"
+  - "7"
+  - "8"
+  - "9"
+
+install:
+  - npm install
+  - npm update
+
+script:
+  - npm run unit
+  - npm run bundle
+  - npm run build
+# - eslint --ext .js,.vue src test/unit/specs test/e2e/specs
+# - node test/e2e/runner.js
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

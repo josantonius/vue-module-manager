@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+    <link rel="stylesheet" type="text/css" href="dist/vue-module-manager.min.css">
+  </head>
+
+  <body>
+
+    <div id="app">
+      <vue-module-manager
+        :items="[{
+          'name': 'Minecraft',
+          'version': '1.12.2',
+          'description': 'Minecraft is a game about placing blocks and adventures.',
+          'state': 'active',
+          'url': 'https://github.com/Josantonius/vue-module-manager',
+          'image': 'static/minecraft.jpg'
+        }]"
+      ></vue-module-manager>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="dist/vue-module-manager.min.js"></script>
+
+    <script>
+      
+      Vue.component('VueModuleManager', VueModuleManager.VueModuleManager)
+
+      new Vue().$mount('#app')
+
+    </script>
+
+  </body>
+
+</html>

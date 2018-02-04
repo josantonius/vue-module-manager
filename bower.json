@@ -1,0 +1,22 @@
+{
+  "name": "vue-module-manager",
+  "description": "Component for module management with Vue.js.",
+  "main": "./dist/vue-module-manager.min.js",
+  "authors": [
+    "Josantonius <hello@josantonius.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "vuejs",
+    "module-manager"
+  ],
+  "homepage": "https://github.com/josantonius/vue-module-manager",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
