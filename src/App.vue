@@ -101,13 +101,13 @@ export default {
     <vue-module-manager
       :items="items"
       :translations="translations"
-      @onChange="onChange"
-      @onActive="onActive"
-      @onInactive="onInactive"
-      @onUpdate="onUpdate"
-      @onInstall="onInstall"
-      @onUninstall="onUninstall"
-      @onUninstalled="onUninstalled"
+      v-on:on-change="onChange"
+      v-on:on-active="onActive"
+      v-on:on-inactive="onInactive"
+      v-on:on-update="onUpdate"
+      v-on:on-install="onInstall"
+      v-on:on-uninstall="onUninstall"
+      v-on:on-uninstalled="onUninstalled"
     ></vue-module-manager>
   </div>
 </template>

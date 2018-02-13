@@ -536,14 +536,14 @@ describe('VueModuleManager.vue', () => {
     })
   })
   describe('@events', () => {
-    describe('@onChange', () => {
+    describe('@on-change', () => {
       it('should be output each time a module status is changed and send the index and component instance as parameter', () => {
         let isChange = null
         const vm = new Vue({
           template: `
             <div><vue-module-manager
               :items="items"
-              @onChange="onChange">
+              @on-change="onChange">
             </vue-module-manager></div>
           `,
           components: { VueModuleManager },
@@ -566,14 +566,14 @@ describe('VueModuleManager.vue', () => {
         expect(isChange).toEqual(true)
       })
     })
-    describe('@onActive', () => {
+    describe('@on-active', () => {
       it('should emited when change state and the new is "active"', () => {
         let isActive = null
         const vm = new Vue({
           template: `
             <div><vue-module-manager
               :items="items"
-              @onActive="onActive">
+              @on-active="onActive">
             </vue-module-manager></div>
           `,
           components: { VueModuleManager },
@@ -595,14 +595,14 @@ describe('VueModuleManager.vue', () => {
         expect(isActive).toEqual(true)
       })
     })
-    describe('@onInactive', () => {
+    describe('@on-inactive', () => {
       it('should emited when change state and the new is "inactive"', () => {
         let isInactive = null
         const vm = new Vue({
           template: `
             <div><vue-module-manager
               :items="items"
-              @onInactive="onInactive">
+              @on-inactive="onInactive">
             </vue-module-manager></div>
           `,
           components: { VueModuleManager },
@@ -624,14 +624,14 @@ describe('VueModuleManager.vue', () => {
         expect(isInactive).toEqual(true)
       })
     })
-    describe('@onUpdate', () => {
+    describe('@on-update', () => {
       it('should emited when change state and the new is "update"', () => {
         let isUpdate = null
         const vm = new Vue({
           template: `
             <div><vue-module-manager
               :items="items"
-              @onUpdate="onUpdate">
+              @on-update="onUpdate">
             </vue-module-manager></div>
           `,
           components: { VueModuleManager },
@@ -653,14 +653,14 @@ describe('VueModuleManager.vue', () => {
         expect(isUpdate).toEqual(true)
       })
     })
-    describe('@onInstall', () => {
+    describe('@on-install', () => {
       it('should emited when change state and the new is "install"', () => {
         let isInstall = null
         const vm = new Vue({
           template: `
             <div><vue-module-manager
               :items="items"
-              @onInstall="onInstall">
+              @on-install="onInstall">
             </vue-module-manager></div>
           `,
           components: { VueModuleManager },
@@ -682,14 +682,14 @@ describe('VueModuleManager.vue', () => {
         expect(isInstall).toEqual(true)
       })
     })
-    describe('@onUninstall', () => {
+    describe('@on-uninstall', () => {
       it('should emited when change state and the new is "install"', () => {
         let isUninstall = null
         const vm = new Vue({
           template: `
             <div><vue-module-manager
               :items="items"
-              @onUninstall="onUninstall">
+              @on-uninstall="onUninstall">
             </vue-module-manager></div>
           `,
           components: { VueModuleManager },
@@ -711,14 +711,14 @@ describe('VueModuleManager.vue', () => {
         expect(isUninstall).toEqual(true)
       })
     })
-    describe('@onUninstalled', () => {
+    describe('@on-uninstalled', () => {
       it('should emited when change state and the new is "install"', () => {
         let isUninstalled = null
         const vm = new Vue({
           template: `
             <div><vue-module-manager
               :items="items"
-              @onUninstalled="onUninstalled">
+              @on-uninstalled="onUninstalled">
             </vue-module-manager></div>
           `,
           components: { VueModuleManager },

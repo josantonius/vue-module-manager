@@ -1,6 +1,6 @@
 # Vue Module Manager
 
-[![NPM version](https://img.shields.io/npm/v/vue-module-manager.svg)](https://www.npmjs.com/package/vue-module-manager) [![VueJS v2.x compatible](https://img.shields.io/badge/vue-2.x-41b883.svg)](https://vuejs.org/) [![License](https://img.shields.io/badge/License-MIT-9b59b6.svg)](LICENSE) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5d4399ab7a904f638c4b6fe5aa7bb09a)](https://www.codacy.com/app/Josantonius/vue-module-manager?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Josantonius/vue-module-manager&amp;utm_campaign=Badge_Grade) [![Travis](https://travis-ci.org/Josantonius/vue-module-manager.svg)](https://travis-ci.org/Josantonius/vue-module-manager) [![Standard](https://img.shields.io/badge/standard-js-03a9f4.svg)](https://standardjs.com/) [![codecov](https://codecov.io/gh/Josantonius/vue-module-manager/branch/master/graph/badge.svg)](https://codecov.io/gh/Josantonius/vue-module-manager) [![ kB](https://img.shields.io/badge/minified-~12.2kB-009688.svg)](dist) [![Dependency Status](https://beta.gemnasium.com/badges/github.com/Josantonius/vue-module-manager.svg)](https://beta.gemnasium.com/projects/github.com/Josantonius/vue-module-manager)
+[![NPM version](https://img.shields.io/npm/v/vue-module-manager.svg)](https://www.npmjs.com/package/vue-module-manager) [![VueJS v2.x compatible](https://img.shields.io/badge/vue-2.x-41b883.svg)](https://vuejs.org/) [![License](https://img.shields.io/badge/License-MIT-9b59b6.svg)](LICENSE) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5d4399ab7a904f638c4b6fe5aa7bb09a)](https://www.codacy.com/app/Josantonius/vue-module-manager?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Josantonius/vue-module-manager&amp;utm_campaign=Badge_Grade) [![Travis](https://travis-ci.org/Josantonius/vue-module-manager.svg)](https://travis-ci.org/Josantonius/vue-module-manager) [![Standard](https://img.shields.io/badge/standard-js-03a9f4.svg)](https://standardjs.com/) [![codecov](https://codecov.io/gh/Josantonius/vue-module-manager/branch/master/graph/badge.svg)](https://codecov.io/gh/Josantonius/vue-module-manager) [![ kB](https://img.shields.io/badge/minified-~12.2kB-009688.svg)](dist) [![Dependency Status](https://beta.gemnasium.com/badges/github.com/Josantonius/vue-module-handler.svg)](https://beta.gemnasium.com/projects/github.com/Josantonius/vue-module-handler)
 
 [English version](README.md)
 
@@ -195,13 +195,13 @@ new Vue({
 ```html
 <vue-module-manager
   :items="items"
-  @onChange="onChange"
-  @onActive="onActive"
-  @onInactive="onInactive"
-  @onUpdate="onUpdate"
-  @onInstall="onInstall"
-  @onUninstall="onUninstall"
-  @onUninstalled="onUninstalled"
+  @on-change="onChange"
+  @on-active="onActive"
+  @on-inactive="onInactive"
+  @on-update="onUpdate"
+  @on-install="onInstall"
+  @on-uninstall="onUninstall"
+  @on-uninstalled="onUninstalled"
 ></vue-module-manager>
 ```
 
@@ -220,36 +220,36 @@ new Vue({
   },
   methods: {
     onChange: function onChange (index, vm) {
-      console.info('@onChange: ' + index)
+      console.info('@on-change: ' + index)
     },
     onActive: function onActive (index, vm) {
-      console.info('@onActive: ' + index)
+      console.info('@on-active: ' + index)
     },
     onInactive: function onInactive (index, vm) {
-      console.info('@onInactive: ' + index)
+      console.info('@on-inactive: ' + index)
     },
     onUpdate: function onUpdate (index, vm) {
-      console.info('@onUpdate: ' + index)
+      console.info('@on-update: ' + index)
     },
     onInstall: function onInstall (index, vm) {
-      console.info('@onInstall: ' + index)
+      console.info('@on-install: ' + index)
     },
     onUninstall: function onUninstall (index, vm) {
-      console.info('@onUninstall: ' + index)
+      console.info('@on-uninstall: ' + index)
     },
     onUninstalled: function onUninstalled (index, vm) {
-      console.info('@onUninstalled: ' + index)
+      console.info('@on-uninstalled: ' + index)
     }
   }
 })
 ```
 
-### - Escuchando el evento [@onInstall](#oninstall) y [deteniendo el icono de carga](#changestate) después de 3 segundos.
+### - Escuchando el evento [@on-install](#on-install) y [deteniendo el icono de carga](#changestate) después de 3 segundos.
 
 ```html
 <vue-module-manager
   :items="items"
-  @onInstall="onInstall"
+  @on-install="onInstall"
 ></vue-module-manager>
 ```
 
@@ -276,12 +276,12 @@ new Vue({
 })
 ```
 
-### - Escuchando el evento [@onUninstall](#onuninstall) y [deteniendo el icono de carga](#changestate) después de 3 segundos.
+### - Escuchando el evento [@on-uninstall](#on-uninstall) y [deteniendo el icono de carga](#changestate) después de 3 segundos.
 
 ```html
 <vue-module-manager
   :items="items"
-  @onUninstall="onUninstall"
+  @on-uninstall="onUninstall"
 ></vue-module-manager>
 ```
 
@@ -308,12 +308,12 @@ new Vue({
 })
 ```
 
-### - Escuchando el evento [@onUpdate](#onupdate), [deteniendo el icono de carga](#changestate) después de 3 segundos y actualizando la información del módulo.
+### - Escuchando el evento [@on-update](#on-update), [deteniendo el icono de carga](#changestate) después de 3 segundos y actualizando la información del módulo.
 
 ```html
 <vue-module-manager
   :items="items"
-  @onUpdate="onUpdate"
+  @on-update="onUpdate"
 ></vue-module-manager>
 ```
 
@@ -338,7 +338,7 @@ new Vue({
   methods: {
     onUpdate: function onUpdate (index, vm) {
       let self = this
-      console.info('@onUpdate: ' + index)
+      console.info('@on-update: ' + index)
       setTimeout(function () {
         vm.changeState(index)
         self.items[index].version = '8.1.2'
@@ -383,7 +383,7 @@ Default: `null`
 
 Eventos disponibles en este componente:
 
-### @onChange
+### @on-change
 
 Se lanza cada vez que cambia el estado del módulo.
 
@@ -397,10 +397,10 @@ onChange: function onChange (index, vm) { }
 | index | `Object` | Instancia del componente.
 
 ```html
-<vue-module-manager :items="[]" @onChange="onChange">
+<vue-module-manager :items="[]" @on-change="onChange">
 ```
 
-### @onActive
+### @on-active
 
 Se lanza cada vez que el estado del módulo cambia de inactivo a activo.
 
@@ -414,10 +414,10 @@ onActive: function onActive (index, vm) { }
 | index | `Object` | Instancia del componente.
 
 ```html
-<vue-module-manager :items="[]" @onActive="onActive">
+<vue-module-manager :items="[]" @on-active="onActive">
 ```
 
-### @onInactive
+### @on-inactive
 
 Se lanza cada vez que el estado del módulo cambia de activo a inactivo.
 
@@ -431,10 +431,10 @@ onInactive: function onInactive (index, vm) { }
 | index | `Object` | Instancia del componente.
 
 ```html
-<vue-module-manager :items="[]" @onInactive="onInactive">
+<vue-module-manager :items="[]" @on-inactive="onInactive">
 ```
 
-### @onUninstalled
+### @on-uninstalled
 
 Se lanza cada vez que el estado del módulo cambia de desinstalar a desinstalado.
 
@@ -448,10 +448,10 @@ onUninstalled: function onUninstalled (index, vm) { }
 | index | `Object` | Instancia del componente.
 
 ```html
-<vue-module-manager :items="[]" @onUninstalled="onUninstalled">
+<vue-module-manager :items="[]" @on-uninstalled="onUninstalled">
 ```
 
-### @onInstall
+### @on-install
 
 Se lanza cada vez que el estado del módulo cambia de desinstalado a instalar.
 
@@ -465,7 +465,7 @@ onInstall: function onInstall (index, vm) { }
 | index | `Object` | Instancia del componente.
 
 ```html
-<vue-module-manager :items="[]" @onInstall="onInstall">
+<vue-module-manager :items="[]" @on-install="onInstall">
 ```
 
 Este estado iniciará cargador de instalación que deberá ser detenido a través del método [changeState](#changestate):
@@ -476,7 +476,7 @@ vm.changeState(index)
 
 [Ver ejemplos.](#ejemplos)
 
-### @onUninstall
+### @on-uninstall
 
 Se lanza cada vez que el estado del módulo cambia de instalado to desinstalar.
 
@@ -490,7 +490,7 @@ onUninstall: function onUninstall (index, vm) { }
 | index | `Object` | Instancia del componente.
 
 ```html
-<vue-module-manager :items="[]" @onUninstall="onUninstall">
+<vue-module-manager :items="[]" @on-uninstall="onUninstall">
 ```
 
 Este estado iniciará cargador de desinstalación que deberá ser detenido a través del método [changeState](#changestate):
@@ -501,7 +501,7 @@ vm.changeState(index)
 
 [Ver ejemplos.](#ejemplos)
 
-### @onUpdate
+### @on-update
 
 Se lanza cada vez que el estado del módulo cambia de desactualizado a actualizado.
 
@@ -515,7 +515,7 @@ onUpdate: function onUpdate (index, vm) { }
 | index | `Object` | Instancia del componente.
 
 ```html
-<vue-module-manager :items="[]" @onUpdate="onUpdate">
+<vue-module-manager :items="[]" @on-update="onUpdate">
 ```
 
 Este estado iniciará un cargador de actualización que deberá ser detenido a través del método [changeState](#changestate):
