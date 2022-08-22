@@ -8,3 +8,4 @@ test/e2e/reports
 .repository.md
 .vscode/
 package-lock.json
+vue-module-manager.code-workspace
