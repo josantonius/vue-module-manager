@@ -1,6 +1,7 @@
 # Vue Module Manager
 
-[![NPM version](https://img.shields.io/npm/v/vue-module-manager.svg)](https://www.npmjs.com/package/vue-module-manager) [![VueJS v2.x compatible](https://img.shields.io/badge/vue-2.x-41b883.svg)](https://vuejs.org/) [![License](https://img.shields.io/badge/License-MIT-9b59b6.svg)](LICENSE) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5d4399ab7a904f638c4b6fe5aa7bb09a)](https://www.codacy.com/app/Josantonius/vue-module-manager?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Josantonius/vue-module-manager&amp;utm_campaign=Badge_Grade) [![Travis](https://travis-ci.org/Josantonius/vue-module-manager.svg)](https://travis-ci.org/Josantonius/vue-module-manager) [![Standard](https://img.shields.io/badge/standard-js-03a9f4.svg)](https://standardjs.com/) [![codecov](https://codecov.io/gh/Josantonius/vue-module-manager/branch/master/graph/badge.svg)](https://codecov.io/gh/Josantonius/vue-module-manager) [![ kB](https://img.shields.io/badge/minified-~12.2kB-009688.svg)](dist) [![Dependency Status](https://beta.gemnasium.com/badges/github.com/Josantonius/vue-module-handler.svg)](https://beta.gemnasium.com/projects/github.com/Josantonius/vue-module-handler)
+[![NPM version](https://img.shields.io/npm/v/vue-module-manager.svg)](https://www.npmjs.com/package/vue-module-manager)
+[![License](https://img.shields.io/badge/License-MIT-9b59b6.svg)](LICENSE)
 
 [Versión en español](README-ES.md)
 
@@ -8,7 +9,7 @@ Component for module management with Vue.js.
 
 <p align="center">
   <a href="https://josantonius.github.io/vue-module-manager/" title="Vue Module Manager">
-    <img src="https://raw.githubusercontent.com/Josantonius/vue-module-manager/master/vue-module-manager.gif">
+    <img src="docs/static/vue-module-manager.gif">
   </a>
 </p>
 
@@ -21,10 +22,8 @@ Component for module management with Vue.js.
 - [Events](#events)
 - [Methods](#methods)
 - [Tests](#tests)
-- [TODO](#-todo)
-- [Contribute](#contribute)
+- [Sponsor](#Sponsor)
 - [License](#license)
-- [Copyright](#copyright)
 
 ---
 
@@ -40,7 +39,7 @@ Component for module management with Vue.js.
 
 Install the package:
 
-    $ npm install vue-module-manager
+    npm install vue-module-manager
 
 Register the component:
 
@@ -88,7 +87,7 @@ Use the component:
 
 Examples of use for this component:
 
-### - Using [CDN](#cdn):
+### - Using [CDN](#cdn)
 
 ```html
 <!DOCTYPE html>
@@ -118,7 +117,7 @@ Examples of use for this component:
 </html>
 ```
 
-### - Adding [items](#items):
+### - Adding [items](#items)
 
 ```html
 <vue-module-manager
@@ -162,7 +161,7 @@ new Vue({
 })
 ```
 
-### - Setting the button [translations](#translations):
+### - Setting the button [translations](#translations)
 
 ```html
 <vue-module-manager
@@ -190,7 +189,7 @@ new Vue({
 })
 ```
 
-### - Listening the [events](#events):
+### - Listening the [events](#events)
 
 ```html
 <vue-module-manager
@@ -244,7 +243,7 @@ new Vue({
 })
 ```
 
-### - Listening to the [@on-install](#on-install) event and [stopping the loader](#changestate) with set timetout.
+### - Listening to the [@on-install](#on-install) event and [stopping the loader](#changestate) with set timetout
 
 ```html
 <vue-module-manager
@@ -276,7 +275,7 @@ new Vue({
 })
 ```
 
-### - Listening to the [@on-uninstall](#on-uninstall) event and [stopping the loader](#changestate) after a certain time.
+### - Listening to the [@on-uninstall](#on-uninstall) event and [stopping the loader](#changestate) after a certain time
 
 ```html
 <vue-module-manager
@@ -308,7 +307,7 @@ new Vue({
 })
 ```
 
-### - Listening to the [@on-update](#on-update) event, [stopping the loader](#changestate) after a certain time and updating the module information.
+### - Listening to the [@on-update](#on-update) event, [stopping the loader](#changestate) after a certain time and updating the module information
 
 ```html
 <vue-module-manager
@@ -544,73 +543,51 @@ vm.changeState(index)
 | --- | --- | --- | --- |
 | index | `Number` | Module index. | `true`
 
-## Tests 
+## Tests
 
 Clone the repository:
 
-    $ git clone https://github.com/Josantonius/vue-module-manager.git vue-module-manager
+    git clone https://github.com/Josantonius/vue-module-manager.git vue-module-manager
 
 Go to the directory:
 
-    $ cd vue-module-manager
+    cd vue-module-manager
 
 Install dependencies:
 
-    $ npm install
+    npm install
 
 Run [unit tests](test):
 
-    $ npm run test
+    npm run test
 
 Run [ESLint](https://eslint.org/) to ensure that code style is compatible with [Standar JavaScript](https://standardjs.com/):
 
-    $ npm run lint
+    npm run lint
 
 Run [serve](docs) with hot reload:
 
-    $ npm run dev
+    npm run dev
 
 Build [distribution](dist) with minification:
 
-    $ npm run bundle
+    npm run bundle
 
 Build [demo](docs) for production with minification:
 
-    $ npm run build
+    npm run build
 
 Run all the above:
 
-    $ npm run finish
+    npm run finish
 
-## ☑ TODO
+## Sponsor
 
-- [ ] Improve button transitions.
-- [ ] Fix error when trying to pass ESlint tests in [Travis CI](.travis.yml).
-- [ ] Fix error when trying to pass E2E tests in [Travis CI](.travis.yml).
-- [ ] Add new feature.
-- [ ] Improve tests.
-- [ ] Improve documentation.
-
-## Contribute
-
-If you would like to help, please take a look at the list of
-[issues](https://github.com/Josantonius/vue-module-manager/issues) or the [To Do](#-todo) checklist.
-
-**Pull requests**
-
-* [Fork and clone](https://help.github.com/articles/fork-a-repo).
-* Make changes and run the [tests](#tests).
-* Create a **branch**, **commit**, **push** and send me a
-  [pull request](https://help.github.com/articles/using-pull-requests).
+If this project helps you to reduce your development time,
+[you can sponsor me](https://github.com/josantonius#sponsor) to support my open source work :blush:
 
 ## License
 
-This project is licensed under **MIT license**. See the [LICENSE](LICENSE) file for more info.
+This repository is licensed under the [MIT License](LICENSE).
 
-## Copyright
-
-2018 Josantonius, [josantonius.com](https://josantonius.com/)
-
-If you find it useful, let me know :wink:
-
-You can contact me on [Twitter](https://twitter.com/Josantonius) or through my [email](mailto:hello@josantonius.com).
+Copyright © 2018-2022, [Josantonius](https://github.com/josantonius#contact)

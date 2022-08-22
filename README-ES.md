@@ -1,6 +1,7 @@
 # Vue Module Manager
 
-[![NPM version](https://img.shields.io/npm/v/vue-module-manager.svg)](https://www.npmjs.com/package/vue-module-manager) [![VueJS v2.x compatible](https://img.shields.io/badge/vue-2.x-41b883.svg)](https://vuejs.org/) [![License](https://img.shields.io/badge/License-MIT-9b59b6.svg)](LICENSE) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5d4399ab7a904f638c4b6fe5aa7bb09a)](https://www.codacy.com/app/Josantonius/vue-module-manager?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Josantonius/vue-module-manager&amp;utm_campaign=Badge_Grade) [![Travis](https://travis-ci.org/Josantonius/vue-module-manager.svg)](https://travis-ci.org/Josantonius/vue-module-manager) [![Standard](https://img.shields.io/badge/standard-js-03a9f4.svg)](https://standardjs.com/) [![codecov](https://codecov.io/gh/Josantonius/vue-module-manager/branch/master/graph/badge.svg)](https://codecov.io/gh/Josantonius/vue-module-manager) [![ kB](https://img.shields.io/badge/minified-~12.2kB-009688.svg)](dist) [![Dependency Status](https://beta.gemnasium.com/badges/github.com/Josantonius/vue-module-handler.svg)](https://beta.gemnasium.com/projects/github.com/Josantonius/vue-module-handler)
+[![NPM version](https://img.shields.io/npm/v/vue-module-manager.svg)](https://www.npmjs.com/package/vue-module-manager)
+[![License](https://img.shields.io/badge/License-MIT-9b59b6.svg)](LICENSE)
 
 [English version](README.md)
 
@@ -8,7 +9,7 @@ Componente para manejo de módulos con Vue.js.
 
 <p align="center">
   <a href="https://josantonius.github.io/vue-module-manager/" title="Vue Module Manager">
-    <img src="https://raw.githubusercontent.com/Josantonius/vue-module-manager/master/vue-module-manager.gif">
+    <img src="docs/static/vue-module-manager.gif">
   </a>
 </p>
 
@@ -21,10 +22,8 @@ Componente para manejo de módulos con Vue.js.
 - [Eventos](#eventos)
 - [Métodos](#métodos)
 - [Tests](#tests)
-- [Tareas pendientes](#-tareas-pendientes)
-- [Contribuir](#contribuir)
+- [Patrocinar](#patrocinar)
 - [Licencia](#licencia)
-- [Copyright](#copyright)
 
 ---
 
@@ -40,7 +39,7 @@ Componente para manejo de módulos con Vue.js.
 
 Instalar el paquete:
 
-    $ npm install vue-module-manager
+    npm install vue-module-manager
 
 Registrar el componente:
 
@@ -88,7 +87,7 @@ Usar el componente:
 
 Ejemplos de uso para este componente:
 
-### - Usando [CDN](#cdn):
+### - Usando [CDN](#cdn)
 
 ```html
 <!DOCTYPE html>
@@ -118,7 +117,7 @@ Ejemplos de uso para este componente:
 </html>
 ```
 
-### - Agregando [módulos](#items):
+### - Agregando [módulos](#items)
 
 ```html
 <vue-module-manager
@@ -162,7 +161,7 @@ new Vue({
 })
 ```
 
-### - Estableciendo [traducciones](#translations) para los botones:
+### - Estableciendo [traducciones](#translations) para los botones
 
 ```html
 <vue-module-manager
@@ -190,7 +189,7 @@ new Vue({
 })
 ```
 
-### - Escuchando [eventos](#eventos):
+### - Escuchando [eventos](#eventos)
 
 ```html
 <vue-module-manager
@@ -244,7 +243,7 @@ new Vue({
 })
 ```
 
-### - Escuchando el evento [@on-install](#on-install) y [deteniendo el icono de carga](#changestate) después de 3 segundos.
+### - Escuchando el evento [@on-install](#on-install) y [deteniendo el icono de carga](#changestate) después de 3 segundos
 
 ```html
 <vue-module-manager
@@ -276,7 +275,7 @@ new Vue({
 })
 ```
 
-### - Escuchando el evento [@on-uninstall](#on-uninstall) y [deteniendo el icono de carga](#changestate) después de 3 segundos.
+### - Escuchando el evento [@on-uninstall](#on-uninstall) y [deteniendo el icono de carga](#changestate) después de 3 segundos
 
 ```html
 <vue-module-manager
@@ -308,7 +307,7 @@ new Vue({
 })
 ```
 
-### - Escuchando el evento [@on-update](#on-update), [deteniendo el icono de carga](#changestate) después de 3 segundos y actualizando la información del módulo.
+### - Escuchando el evento [@on-update](#on-update), [deteniendo el icono de carga](#changestate) después de 3 segundos y actualizando la información del módulo
 
 ```html
 <vue-module-manager
@@ -542,72 +541,52 @@ vm.changeState(index)
 | --- | --- | --- | --- |
 | index | `Number` | Índice del módulo. | `true`
 
-## Tests 
+## Tests
 
 Clonar el repositorio:
 
-    $ git clone https://github.com/Josantonius/vue-module-manager.git vue-module-manager
+    git clone https://github.com/Josantonius/vue-module-manager.git vue-module-manager
 
 Ir al directorio:
 
-    $ cd vue-module-manager
+    cd vue-module-manager
 
 Instalar dependencias:
 
-    $ npm install
+    npm install
 
 Ejecutar [pruebas unitarias](test):
 
-    $ npm run test
+    npm run test
 
 Ejecutar [ESLint](https://eslint.org/) para validar que el estilo de código es compatible con el [Standar JavaScript](https://standardjs.com/):
 
-    $ npm run lint
+    npm run lint
 
 Ejecutar [serve](docs) con recarga en caliente:
 
-    $ npm run dev
+    npm run dev
 
 Montar [distribución](dist) con minificación:
 
-    $ npm run bundle
+    npm run bundle
 
 Montar [demo](docs) para producción con minificación:
 
-    $ npm run build
+    npm run build
 
 Ejecutar todo lo anterior:
 
-    $ npm run finish
+    npm run finish
 
-## ☑ Tareas pendientes
+## Patrocinar
 
-- [ ] Corregir error al intentar pasar las pruebas de ESlint en [Travis CI](.travis.yml).
-- [ ] Corregir error al intentar pasar las pruebas de E2E en [Travis CI](.travis.yml).
-- [ ] Añadir nueva funcionalidad.
-- [ ] Mejorar pruebas.
-- [ ] Mejorar documentación.
-
-## Contribuir
-
-Si deseas colaborar, puedes echar un vistazo a la lista de
-[issues](https://github.com/Josantonius/vue-module-manager/issues) o [tareas pendientes](#-tareas-pendientes).
-
-**Pull requests**
-
-* [Fork and clone](https://help.github.com/articles/fork-a-repo).
-* Realiza modificaciones y ejecuta las [pruebas](#tests).
-* Crea una nueva rama (**branch**), **commit**, **push** y envíame un
-  [pull request](https://help.github.com/articles/using-pull-requests)
+Si este proyecto te ayuda a reducir el tiempo de desarrollo,
+[puedes patrocinarme](https://github.com/josantonius/lang/es-ES/README.md#patrocinar)
+para apoyar mi trabajo :blush:
 
 ## Licencia
 
-Este proyecto está licenciado bajo **licencia MIT**. Consulta el archivo [LICENSE](LICENSE) para más información.
+Este repositorio tiene una licencia [MIT License](LICENSE).
 
-## Copyright
-
-2018 Josantonius, [josantonius.com](https://josantonius.com/)
-
-Si te ha resultado útil, házmelo saber :wink:
-
-Puedes contactarme en [Twitter](https://twitter.com/Josantonius) o a través de mi [correo electrónico](mailto:hello@josantonius.com).
+Copyright © 2018-2022, [Josantonius](https://github.com/josantonius/lang/es-ES/README.md#contacto)
